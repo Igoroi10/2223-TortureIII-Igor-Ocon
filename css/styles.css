@@ -1,0 +1,16 @@
+
+
+.container {
+    height:600px;
+    background-color:#fff;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .container div{
+    margin: 5px;
+    width: auto;
+    height: 550px;
+    color:black;
+    border: solid thin black;
+  }

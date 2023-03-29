@@ -39,9 +39,9 @@ function createPotion(){
 
     if(commonEffectResult === -1){
         creationPhrase      = "POTION FAILED"
-        ingredientsPhrase   = ".";
-        potionNamePhrase    = ".";
-        weightPhrase        = ".";
+        ingredientsPhrase   = globals.chosenIngredients[firstSelected].name + " + " + globals.chosenIngredients[secondSelected].name;
+        potionNamePhrase    = "failed potion";
+        weightPhrase        = "1.2";
     }
 
     else{
@@ -61,7 +61,6 @@ function createPotion(){
 
     div.innerHTML = HTMLstring;
 
-    //printResult(creationPhrase, ingredientsPhrase, potionNamePhrase, weightPhrase);
 
 }
 
@@ -110,20 +109,30 @@ function select4Ingredients(){
 }
 
 function print4Ingredients(){
+    let div = [];
+    let firstDiv = document.getElementById('firstIngredient');
+    let secondDiv = document.getElementById('secondIngredient');
+    let thirdDiv = document.getElementById('thirdIngredient');
+    let  fourthDiv = document.getElementById('fourthIngredient'); 
 
-}
+    div.push(firstDiv);
+    div.push(secondDiv);
+    div.push(thirdDiv);
+    div.push(fourthDiv);
 
-function printResult(creation, ingredients, name, weight){
+     for(let i = 0; i < 4; i++){
+            const HTMLstring = "<p>Ingredient "+(i+1)+ "</p><br>"+
+            "<img src='" + globals.chosenIngredients[i].image+ "'>"+
+            "<p>" + globals.chosenIngredients[i].name + "</p> <br>"+
+            "<p> value:" + globals.chosenIngredients[i].value + "    weight: "+ globals.chosenIngredients[i].weight + "</p> <br>"+
+            "<p>" + globals.chosenIngredients[i].effects[0] + "     "+ globals.chosenIngredients[i].effects[1] + "</p> <br>"+
+            "<p>" + globals.chosenIngredients[i].effects[2] + "     "+ globals.chosenIngredients[i].effects[3] + "</p> <br>";
 
-    const div = document.getElementById('potionResult');
+            div[i].innerHTML = HTMLstring;
 
-    const HTMLstring =  "<p>" + creation + "</p> <br>"+
-                       +"<p>" + ingredients + "</p> <br>"+
-                       +"<p>" + name + "</p> <br>"+
-                       +"<p>" + weight + "</p> <br>";
-
-    div.innerHTML = HTMLstring;
-    
+            console.log(HTMLstring);
+     }
+         
 }
 
 export {
