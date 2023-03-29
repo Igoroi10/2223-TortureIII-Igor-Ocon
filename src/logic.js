@@ -124,9 +124,9 @@ function print4Ingredients(){
             const HTMLstring = "<p>Ingredient "+(i+1)+ "</p><br>"+
             "<img src='" + globals.chosenIngredients[i].image+ "'>"+
             "<p>" + globals.chosenIngredients[i].name + "</p> <br>"+
-            "<p> value:" + globals.chosenIngredients[i].value + "    weight: "+ globals.chosenIngredients[i].weight + "</p> <br>"+
-            "<p>" + globals.chosenIngredients[i].effects[0] + "     "+ globals.chosenIngredients[i].effects[1] + "</p> <br>"+
-            "<p>" + globals.chosenIngredients[i].effects[2] + "     "+ globals.chosenIngredients[i].effects[3] + "</p> <br>";
+            "<p> value:" + globals.chosenIngredients[i].value + "             weight: "+ globals.chosenIngredients[i].weight + "</p> <br>"+
+            "<p>" + globals.chosenIngredients[i].effects[0] + "                       "+ globals.chosenIngredients[i].effects[1] + "</p> <br>"+
+            "<p>" + globals.chosenIngredients[i].effects[2] + "                       "+ globals.chosenIngredients[i].effects[3] + "</p> <br>";
 
             div[i].innerHTML = HTMLstring;
 
