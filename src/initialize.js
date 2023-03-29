@@ -1,4 +1,6 @@
 import globals from "./globals.js"
+import {btnCreateDown,} from "./logic.js"
+import {getDataBaseInfo} from ".initialize.js"
 
 
 function initHTMLelements(){
@@ -7,7 +9,7 @@ function initHTMLelements(){
     globals.btnCreate       = document.getElementById('btnCreate');
 
     globals.btnCreate.addEventListener("mousedown",       btnStartDown,       false);
-    globals.btnCreate.addEventListener("mousedown",       btnStartOver,       false);
+    globals.btnCreate.addEventListener("mousedown",       btnCreateDown,      false);
 
 
 }
@@ -19,7 +21,12 @@ function initEvents(){
     globals.canvas.addEventListener("mousemove", canvasMousemoveHandler, false);
 }
 
+function getDataBaseInfo(){
+
+}
+
 export {
     initHTMLelements,
     initEvents,
+    getDataBaseInfo,
 }
