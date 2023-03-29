@@ -1,5 +1,5 @@
 import globals from "./globals.js";
-import {createPotion,} from "./logic.js"
+import {createPotion, select4Ingredients} from "./logic.js"
 import {getDataBaseInfo} from "./initialize.js"
 import {States} from "./constans.js"
 

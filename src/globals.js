@@ -13,4 +13,6 @@ export default {
     //estado
     state:          {},
 
+    chosenIngredients: [],
+
 }

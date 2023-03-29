@@ -1,5 +1,6 @@
 import globals from "./globals.js"
 import {btnStartDown, btnCreateDown, mouseDownHandler, displaySecondPage} from "./events.js"
+import { select4Ingredients } from "./logic.js";
 
 
 
@@ -40,6 +41,7 @@ function getDataBaseInfo(){
                     console.log(globals.potionsData);
 
                     displaySecondPage();
+                    select4Ingredients();
 
                 }
                 
