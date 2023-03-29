@@ -10,6 +10,7 @@ function btnStartDown(){
 
 function btnCreateDown(){
     createPotion()
+    displayResultsDiv();
     globals.state = States.RESULT;
 }
 
@@ -19,6 +20,11 @@ function displaySecondPage(){
     document.getElementById('startDiv').style.display           = "none";
 }
 
+function displayResultsDiv(){
+
+    document.getElementById('btnCreate').style.display                   = "none";
+    document.getElementById('potionResult').style.display                = "block";
+}
 function mouseDownHandler(){
 
     switch(globals.state){
@@ -39,7 +45,7 @@ function mouseDownHandler(){
 }
 
 function print4Ingredients(){
-    
+
 }
 
 export{
