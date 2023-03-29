@@ -1,6 +1,36 @@
 import globals from "./globals.js";
 
 function createPotion(){
+    console.log
+    let firstSelected  = -1;
+    let secondSelected = -1;
+    let commonEffectResult = -1;
+    let min = 0;
+    let max = 3;
+
+    for(let i = 0; i < globals.chosenIngredients.length; i++){
+        let randomNum = Math.floor(Math.random() * (max - min + 1) + min);
+        if(firstSelected === -1){
+            firstSelected = randomNum
+        }
+    
+        else if(secondSelected === -1 && randomNum !== firstSelected){
+            secondSelected = randomNum;
+            i = globals.chosenIngredients.length;
+        }
+    }
+
+    for(let i = 0; i < 4; i++){
+        for(let l = 0; l < 4; l++){
+            if(globals.chosenIngredients[firstSelected].effects[i] === globals.chosenIngredients[secondSelected].effects[l]){
+                commonEffectResult = i;
+            }
+        }
+    }
+    // console.log(globals.chosenIngredients[firstSelected]);
+    // console.log(globals.chosenIngredients[secondSelected]);
+    // if(commonEffectResult !== -1)
+    // console.log("Resultado de la combinación de efectos: " + globals.chosenIngredients[firstSelected].effects[commonEffectResult]);
 
 }
 

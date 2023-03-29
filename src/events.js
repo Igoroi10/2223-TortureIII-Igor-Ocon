@@ -14,7 +14,7 @@ function btnCreateDown(){
 }
 
 function displaySecondPage(){
-
+    print4Ingredients();
     document.getElementById('potionIngredients').style.display  = "block";
     document.getElementById('startDiv').style.display           = "none";
 }
@@ -36,6 +36,10 @@ function mouseDownHandler(){
             btnStartDown();     
     }
 
+}
+
+function print4Ingredients(){
+    
 }
 
 export{

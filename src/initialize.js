@@ -40,8 +40,8 @@ function getDataBaseInfo(){
 
                     console.log(globals.potionsData);
 
-                    displaySecondPage();
                     select4Ingredients();
+                    displaySecondPage();
 
                 }
                 
