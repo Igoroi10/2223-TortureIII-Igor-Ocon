@@ -55,9 +55,9 @@ function createPotion(){
     const div = document.getElementById('potionResult');
 
     const HTMLstring =  "<p>" + creationPhrase + "</p> <br>"+
-                       +"<p>" + ingredientsPhrase + "</p> <br>"+
-                       +"<p>" + potionNamePhrase + "</p> <br>"+
-                       +"<p>" + weightPhrase + "</p> <br>";
+                       "<p>" + ingredientsPhrase + "</p> <br>"+
+                       "<p>" + potionNamePhrase + "</p> <br>"+
+                       "<p>" + weightPhrase + "</p> <br>";
 
     div.innerHTML = HTMLstring;
 

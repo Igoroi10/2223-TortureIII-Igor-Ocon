@@ -1,5 +1,5 @@
 
-.btnStart{
+.startDiv{
     width: 50%;
     margin: auto;
     height: 40px;
@@ -11,6 +11,8 @@
     font-size: 1em;
     font-weight: 600;
 }
+
+
 .container {
     height:600px;
     background-color:#fff;
@@ -20,7 +22,7 @@
   }
   .container div{
     margin: 5px;
-    width: auto;
+    width: 20%;
     height: 550px;
     color:black;
     border: solid thin black;
