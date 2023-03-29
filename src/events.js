@@ -1,5 +1,5 @@
 import globals from "./globals.js";
-import {createPotion, select4Ingredients} from "./logic.js"
+import {createPotion, select4Ingredients, print4Ingredients} from "./logic.js"
 import {getDataBaseInfo} from "./initialize.js"
 import {States} from "./constans.js"
 
@@ -44,9 +44,7 @@ function mouseDownHandler(){
 
 }
 
-function print4Ingredients(){
 
-}
 
 export{
     btnCreateDown,

@@ -7,6 +7,10 @@ function createPotion(){
     let commonEffectResult = -1;
     let min = 0;
     let max = 3;
+    let creationPhrase;
+    let ingredientsPhrase;
+    let potionNamePhrase;
+    let weightPhrase;
 
     for(let i = 0; i < globals.chosenIngredients.length; i++){
         let randomNum = Math.floor(Math.random() * (max - min + 1) + min);
@@ -27,10 +31,37 @@ function createPotion(){
             }
         }
     }
+
     // console.log(globals.chosenIngredients[firstSelected]);
     // console.log(globals.chosenIngredients[secondSelected]);
     // if(commonEffectResult !== -1)
     // console.log("Resultado de la combinación de efectos: " + globals.chosenIngredients[firstSelected].effects[commonEffectResult]);
+
+    if(commonEffectResult === -1){
+        creationPhrase      = "POTION FAILED"
+        ingredientsPhrase   = ".";
+        potionNamePhrase    = ".";
+        weightPhrase        = ".";
+    }
+
+    else{
+        creationPhrase      = "POTION CREATED"
+        ingredientsPhrase   = globals.chosenIngredients[firstSelected].name + " + " + globals.chosenIngredients[secondSelected].name;
+        potionNamePhrase    = "Potion of " + globals.chosenIngredients[firstSelected].effects[commonEffectResult];
+        weightPhrase        = globals.chosenIngredients[firstSelected].weight + globals.chosenIngredients[secondSelected].weight + 1.2;
+    }
+
+
+    const div = document.getElementById('potionResult');
+
+    const HTMLstring =  "<p>" + creationPhrase + "</p> <br>"+
+                       +"<p>" + ingredientsPhrase + "</p> <br>"+
+                       +"<p>" + potionNamePhrase + "</p> <br>"+
+                       +"<p>" + weightPhrase + "</p> <br>";
+
+    div.innerHTML = HTMLstring;
+
+    //printResult(creationPhrase, ingredientsPhrase, potionNamePhrase, weightPhrase);
 
 }
 
@@ -77,7 +108,26 @@ function select4Ingredients(){
     console.log(globals.chosenIngredients);
 
 }
+
+function print4Ingredients(){
+
+}
+
+function printResult(creation, ingredients, name, weight){
+
+    const div = document.getElementById('potionResult');
+
+    const HTMLstring =  "<p>" + creation + "</p> <br>"+
+                       +"<p>" + ingredients + "</p> <br>"+
+                       +"<p>" + name + "</p> <br>"+
+                       +"<p>" + weight + "</p> <br>";
+
+    div.innerHTML = HTMLstring;
+    
+}
+
 export {
     createPotion,
     select4Ingredients,
+    print4Ingredients,
 }
