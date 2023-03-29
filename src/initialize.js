@@ -1,6 +1,6 @@
 import globals from "./globals.js"
-import {btnCreateDown,} from "./logic.js"
-import {getDataBaseInfo} from ".initialize.js"
+import {btnStartDown, btnCreateDown} from "./events.js"
+
 
 
 function initHTMLelements(){
